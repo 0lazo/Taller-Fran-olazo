@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://boj7kcwisg0pt"]
+
+[ext_resource type="Script" uid="uid://bwxveqh61fsqm" path="res://asteroid.gd" id="1_l7pm1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjdqc"]
+
+[node name="Asteroid" type="RigidBody2D" unique_id=771031595]
+script = ExtResource("1_l7pm1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1075492928]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=782171611]
+shape = SubResource("RectangleShape2D_cjdqc")
