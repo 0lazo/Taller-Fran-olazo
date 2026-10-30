@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://l6arjdj1f0cg"]
+
+[ext_resource type="Script" uid="uid://cnas2dcwaakna" path="res://main.gd" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://73k0jnl5c00i" path="res://Ship.tscn" id="2_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://dlbl2tr7kghrd" path="res://Asteroid.tscn" id="3_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://but57jbt4wxoo" path="res://Bullet.tscn" id="4_fos0i"]
+
+[node name="Main" type="Node2D" unique_id=1713287040]
+script = ExtResource("1_glv2v")
+
+[node name="Ship" parent="." unique_id=630825740 instance=ExtResource("2_uu6xs")]
+position = Vector2(0, -4)
+contact_monitor = true
+max_contacts_reported = 1
+bullet = ExtResource("4_fos0i")
+
+[node name="Asteroid" parent="." unique_id=1880467086 instance=ExtResource("3_cm0pq")]
+position = Vector2(596, 164)
+gravity_scale = 0.0
+
+[node name="Bullet" parent="." unique_id=1212102653 instance=ExtResource("4_fos0i")]
+position = Vector2(593, 423)
+gravity_scale = 0.0

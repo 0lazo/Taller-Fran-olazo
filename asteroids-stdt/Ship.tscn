@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://73k0jnl5c00i"]
+
+[ext_resource type="Script" uid="uid://bdvy6tkui1so5" path="res://ship.gd" id="1_xljvd"]
+[ext_resource type="Texture2D" uid="uid://csf3404t2s5a0" path="res://icon.svg" id="2_h40nn"]
+[ext_resource type="PackedScene" uid="uid://but57jbt4wxoo" path="res://Bullet.tscn" id="2_oam5h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61sci"]
+size = Vector2(129, 125)
+
+[node name="Ship" type="RigidBody2D" unique_id=630825740 node_paths=PackedStringArray("pivot")]
+gravity_scale = 0.0
+script = ExtResource("1_xljvd")
+bullet = ExtResource("2_oam5h")
+pivot = NodePath("Pivot")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2008977810]
+position = Vector2(596.2566, 529.85095)
+scale = Vector2(0.7383847, 0.63829666)
+texture = ExtResource("2_h40nn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1698041828]
+position = Vector2(595.7566, 529.35095)
+scale = Vector2(0.7383847, 0.63829666)
+shape = SubResource("RectangleShape2D_61sci")
+
+[node name="Pivot" type="Node2D" parent="." unique_id=466395181]
+position = Vector2(598, 484)
